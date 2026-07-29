@@ -7,6 +7,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.tommybutz.emparium_registry.network.PacketHandler;
 import org.slf4j.Logger;
 
@@ -18,12 +19,13 @@ public class EmpariumRegistry {
 
     public EmpariumRegistry(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(PacketHandler::register);
-
-
-        modEventBus.addListener(this::clientSetup);
+        if (FMLEnvironment.dist.isClient()) {
+            modEventBus.addListener(this::clientSetup);
+        }
     }
 
     @OnlyIn(Dist.CLIENT)
     private void clientSetup(FMLClientSetupEvent event) {
+        // Client setup if needed later
     }
 }

@@ -48,9 +48,9 @@ public class RegistryScreen extends Screen {
     private static final int CARD_PADDING = 8;
     private static final int CARD_TOP_PADDING = 10;
 
-    private static final int CARD_AREA_X1 = 120;
-    private static final int CARD_AREA_Y1 = 36;
-    private static final int CARD_AREA_X2 = 274;
+    private static final int CARD_AREA_X1 = 119;
+    private static final int CARD_AREA_Y1 = 35;
+    private static final int CARD_AREA_X2 = 268;
     private static final int CARD_AREA_Y2 = 259;
     private static final int CARD_AREA_WIDTH = CARD_AREA_X2 - CARD_AREA_X1;
     private static final int CARD_AREA_HEIGHT = CARD_AREA_Y2 - CARD_AREA_Y1;
